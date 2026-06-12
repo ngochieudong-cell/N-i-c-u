@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Lexend:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Andika", "Lexend", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Force global Andika styling for all interface and user element nodes */
+* {
+  font-family: "Andika", "Lexend", ui-sans-serif, system-ui, sans-serif !important;
+}
+
+/* Playful theme setup and custom animations */
+@layer utilities {
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-6px); }
+    40%, 80% { transform: translateX(6px); }
+  }
+  @keyframes popIn {
+    0% { transform: scale(0.95); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  @keyframes pulseSubtle {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
+  
+  .animate-shake {
+    animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+  }
+  .animate-pop-in {
+    animation: popIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .animate-pulse-subtle {
+    animation: pulseSubtle 2s ease-in-out infinite;
+  }
+}
+
+body {
+  font-family: 'Andika', 'Lexend', system-ui, -apple-system, sans-serif;
+  background-color: #f0f4f9;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism utility card */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}

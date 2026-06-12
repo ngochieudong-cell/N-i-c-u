@@ -1,0 +1,6 @@
+{
+  "name": "Sentence Matcher",
+  "description": "A fun and interactive sentence pairing and language learning game for children.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
